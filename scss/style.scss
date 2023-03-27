@@ -1,0 +1,25 @@
+
+@charset "UTF-8";
+@use"foundation/_base";
+@use"layout/_l-header";
+@use"layout/l-main";
+@use"layout/l-sidebar";
+@use"layout/l-footer";
+
+
+// component-------------------------
+
+@use"object/component/_input";
+@use"object/component/_button";
+@use"object/component/_title";
+
+
+
+// project------------------------
+
+@use"object/project/_header";
+@use"object/project/_main";
+@use"object/project/_footer";
+@use"object/project/_sidebar";
+@use"object/project/_card";
+@use"object/project/_media";

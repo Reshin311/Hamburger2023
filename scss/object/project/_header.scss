@@ -1,0 +1,65 @@
+//header
+
+.p-header-wrapper {
+    background-color: #fff7ef;
+    overflow: hidden;
+}
+.p-button-menu {
+    cursor: pointer;
+    color: #707070;
+    font-size: 20px;
+    display: block;
+    margin: 8px 8px 0 auto;
+    font-family: Roboto;
+    font-weight: 700;
+    
+}   
+
+.p-title-header-main {
+    font-size: 40px;
+    color: #707070;
+    text-align: center;
+}
+
+.p-header-search {
+    display: flex;
+    justify-content: center;
+    margin:40px 7vw 39px;
+    gap: 4vw;
+}
+
+.p-input__header-search {
+    width: 216px;
+    height: 46px;
+    // margin-right: 16px;
+}
+
+.p-btn__header-search {
+    height: 46px;
+    width: 90px;
+    background: linear-gradient(to left, #F2EDE9,#DED8D3 );
+}
+
+
+.p-inner-article__archive {
+    overflow: hidden;
+}
+.c-title__archive-article {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-left: 22px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #3c2a10;
+
+}
+.p-text__archive-article {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #3c2a10;
+    margin: 0px 22px 18px;
+}
+
+
+// single-----------------------------------------
+
