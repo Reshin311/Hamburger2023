@@ -115,32 +115,19 @@
     font-weight: 700;
 }
 
-
-
-
-
-
-// モバイルサイズーーーーーーーーーーーーーーーーーーーーーーーー
-
-@media (max-width: 420px) {
-    .c-title__main {
-        font-size: 4.1rem;
-        margin-top: 13px;
-        margin-left: 15px;
+.c-title__main {
+    font-size: 4.1rem;
+    margin-top: 13px;
+    margin-left: 15px;
     }
-    .c-heading__main {
-        font-size: 2.2rem;
+.c-heading__main {
+    font-size: 2.2rem;
     }
-    .c-text {
-        font-size: 1.6rem;
-        margin-top: 8px;
+.c-text {
+    font-size: 1.6rem;
+    margin-top: 8px;
     }
     
-
-}
-
-
-
 
 // archive---------------------------------------------------
 .p-img-archive-top {
@@ -188,6 +175,7 @@
     background-color: #3c2b1c;
     margin: 0 5vw 20px;
     padding: 32px 16.11px 10px;
+    
 }
 
 .p-title-archive-media {
@@ -241,7 +229,7 @@
 
 }
 
-// single----------------------------------------------------
+// single & page----------------------------------------------------
 
 .p-img__single-top {
     background-image: url(../../../img/ham-burger-with-vegetables-1639557.png);
@@ -249,6 +237,16 @@
     height: 225px;
     overflow: hidden;
 }
+
+// page-top-img
+.p-img__page-top {
+    background-image: url(../../../mainvisual-img/page-title_shop@2x.jpg);
+    background-size: cover;
+    height: 225px;
+    overflow: hidden;
+}
+
+
 
 .p-title__single-top {
     margin-top: 93px;
@@ -298,6 +296,12 @@
     color: #3c2a10;
     font-size: 1.6rem;
     margin-top: 3px;
+    word-break: break-all;
+    a {
+    text-decoration:  underline;
+    color: #4A6C9B;
+    letter-spacing: 0.2em;
+    }
 }
 
 
@@ -316,7 +320,7 @@
 .p-media__single {
     display: flex;
     align-items: flex-start;
-    margin: 30px 5vw;
+    margin: 30px 5vw 40px;
     gap: 9px;
     
 
@@ -362,25 +366,29 @@ ol {
     padding-left: 0;
 }
 
-.p-child-list__single {
-    margin-left: 1em;
-    
+.p-child-ol-list__single {
+    margin: 20px 1.5em 20px;
+
 }
-// .p-list-ul__single {
-//     margin-top: 30px;
-// }
+.p-child-ul-list__single {
+    margin: 20px 1em 20px;
+}
+
 .p-wrapper__list-upper {
     padding-bottom: 57px;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
+
+
 
 
 // タグのリスト-------------------------------------------------------
 .p-container__tag-list-single {
     font-size: 16px;
     background-color: #f5f5f5;
-    margin:20px 5vw;
-    padding: 50px 13vw;
+    margin:30px 5vw;
+    padding: 60px 13vw;
     overflow: hidden;
 }
 .p-child-list__tag {
@@ -388,17 +396,17 @@ ol {
     margin-bottom: 0;
 
 }
-// ------------------------------------------------------
+// テーブル------------------------------------------------------
 .p-container__single-table {
     width: 90vw;
     font-size: 16px;
-    margin: 30px 5vw;
+    margin: 5px 5vw 60px;
 }
 
 .p-table__single {
     margin: auto;
     td {
-        padding: 10px 30px;
+        padding: 30px 30px;
     }
 }
 .p-table__single tr td:nth-child(2) {
@@ -410,7 +418,7 @@ ol {
 
 .p-button__single-under-main {
     display: block;
-    margin: 30px 5vw;
+    margin: 30px 5vw ;
     width: 90%;
     text-align: center;
     padding-top: 30px;
@@ -420,10 +428,10 @@ ol {
     border-radius: 20px;
 
 }
-
+// -------------------------------------------------------
 .p-wrapper-text__single-under-btn {
     display: block;
-    margin:30px 5vw 50px;
+    margin:40px 5vw 80px;
     word-wrap: break-word;
 }
 
