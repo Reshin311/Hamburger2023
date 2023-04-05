@@ -26,17 +26,28 @@
     justify-content: center;
     margin:40px 7vw 39px;
     gap: 4vw;
+    position: relative;
 }
 
+
+
 .p-input__header-search {
-    width: 216px;
+    // width: 216px;
+    width: 55vw;
     height: 46px;
-    // margin-right: 16px;
-}
+    padding: 3px 0 3px 2.5em; /* アイコンを設置するため左の余白*/
+    background-image: url(../../../img/glass.jpg);
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+    }
+    
+
+
 
 .p-btn__header-search {
     height: 46px;
-    width: 90px;
+    // width: 90px;
+    width: 20vw;
     background: linear-gradient(to left, #F2EDE9,#DED8D3 );
 }
 

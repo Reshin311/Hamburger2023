@@ -1,10 +1,49 @@
 
 //main
 
-.c-title__main {
+.p-title__main {
     color: #fff;
     font-weight: bold;
 }
+
+.p-img-top {
+    background-image: url(../../mainvisual-img/mainvisual-pc@2x.jpg);
+    background-size: cover;
+    height: 285px;
+    overflow: hidden;
+}
+.p-title__top {
+    color: #ffff;
+    font-size: 3.6rem;
+    margin: 122px 0 110px 25px;
+    position: absolute;
+    font-weight: 700;
+}
+
+.p-title__main {
+    color: #fff;
+    font-size: 4.1rem;
+    margin-top: 13px;
+    margin-left: 15px;
+    font-family: Roboto;
+    }
+.p-heading__main {
+color: #3C2A10;
+    font-size: 2.2rem;
+    margin: 0 0 0;
+    }
+.p-text {
+    font-size: 1.6rem;
+    margin-top: 8px;
+    color: #3C2A10;
+    }
+    
+
+
+
+
+
+
 .p-card__takeout {
     background-image:url(../../mainvisual-img/takeout3@2x.jpg);
 }
@@ -25,7 +64,7 @@
     }
     
 }
-.c-heading__main {
+.p-heading__main {
     font-weight: bold;
 }
 .p-line__under-title {
@@ -35,7 +74,7 @@
         content: "";
         position: absolute;
         bottom: -10px;
-        left: 23px;
+        left: 22px;
         width: 40px;
         height: 3px;
         background-color: #fff;
@@ -80,8 +119,8 @@
         content: "";
         position: absolute;
         bottom: -18px;
-        left: 30px;
-        width: 60px;
+        left: 40px;
+        width: 75px;
         height: 3px;
         background-color: #fff;
         transform: translateX(-50%);
@@ -101,33 +140,7 @@
 }
 
 
-.p-img-top {
-    background-image: url(../../mainvisual-img/mainvisual-pc@2x.jpg);
-    background-size: cover;
-    height: 285px;
-    overflow: hidden;
-}
-.p-title__top {
-    color: #ffff;
-    font-size: 3.6rem;
-    margin: 122px 0 110px 25px;
-    position: absolute;
-    font-weight: 700;
-}
 
-.c-title__main {
-    font-size: 4.1rem;
-    margin-top: 13px;
-    margin-left: 15px;
-    }
-.c-heading__main {
-    font-size: 2.2rem;
-    }
-.c-text {
-    font-size: 1.6rem;
-    margin-top: 8px;
-    }
-    
 
 // archive---------------------------------------------------
 .p-img-archive-top {
