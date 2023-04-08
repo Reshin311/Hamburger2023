@@ -1,10 +1,13 @@
 
 @charset "UTF-8";
 @use"foundation/_base";
+@use"foundation/_mixin";
+
 @use"layout/_l-header";
 @use"layout/l-main";
 @use"layout/l-sidebar";
 @use"layout/l-footer";
+
 
 
 // component-------------------------
@@ -23,3 +26,5 @@
 @use"object/project/_sidebar";
 @use"object/project/_card";
 @use"object/project/_media";
+
+

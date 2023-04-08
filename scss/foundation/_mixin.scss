@@ -1,0 +1,39 @@
+
+@mixin breakpoint($point) {
+    @if $point == tablet {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+}
+
+@mixin breakpoint($point) {
+    @if $point == pc {
+        @media (min-width: 1280px) {
+            @content;
+        }
+    }
+}
+
+body {
+    @include breakpoint(tablet){
+    display: grid;
+    grid-template:
+        "header header header  aside"
+        "main   main   main   aside"
+        "footer footer footer footer";
+    }
+}
+
+header {
+    grid-area: header;
+}
+main {
+    grid-area: main;
+}
+nav {
+    grid-area: aside;
+}
+footer {
+    grid-area: footer;
+}
