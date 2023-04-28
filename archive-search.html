@@ -63,7 +63,7 @@
 
 
 <!-- media 1 ------------------------------------------->
-    <article class="p-media-archive p-media-archive-search__1 ">
+    <article class="p-media p-media-archive p-media-archive-search__1 ">
         <div class="p-img-archive-media p-img-archive-search-media__1"></div><!-- /.p-img-archive-media -->
         <div class="p-container-media-archive p-container-media-archive-search--1">
             <h3 class="p-title-archive-media p-title-archive-search-media__1">見出しが入ります</h3><!-- /.title-archive-media -->
@@ -78,7 +78,7 @@
     </article><!-- /.p-media-archive -->
 
 <!-- media 2 ------------------------------------------>
-<article class="p-media-archive p-media-archive-search__2 ">
+<article class="p-media p-media-archive p-media-archive-search__2 ">
     <div class="p-img-archive-media p-img-archive-search-media__2"></div><!-- /.p-img-archive-media -->
     <div class="p-container-media-archive p-container-media-archive-search__2">
         <h3 class="p-title-archive-media p-title-archive-search-media__2">見出しが入ります</h3><!-- /.title-archive-media -->
@@ -93,7 +93,7 @@
 </article><!-- /.p-media-archive -->
 
     <!-- media 3 ----------------------------------------->
-    <article class="p-media-archive p-media-archive-search__3 ">
+    <article class="p-media p-media-archive p-media-archive-search__3 ">
         <div class="p-img-archive-media p-img-archive-search-media__3"></div><!-- /.p-img-archive-media -->
         <div class="p-container-media-archive p-container-media-archive-search__3">
             <h3 class="p-title-archive-media p-title-archive-search-media__3">見出しが入ります</h3><!-- /.title-archive-media -->
@@ -107,7 +107,7 @@
         </div><!-- /.p-container-media-archive -->
     </article><!-- /.p-media-archive -->
 <!-- media 4------------------------------------------ -->
-<article class="p-media-archive p-media-archive-search__4 ">
+<article class="p-media p-media-archive p-media-archive-search__4 ">
     <div class="p-img-archive-media p-img-archive-search-media__4"></div><!-- /.p-img-archive-media -->
     <div class="p-container-media-archive p-container-media-archive-search__4">
         <h3 class="p-title-archive-media p-title-archive-search-media__4">見出しが入ります</h3><!-- /.title-archive-media -->
@@ -121,7 +121,7 @@
     </div><!-- /.p-container-media-archive -->
 </article><!-- /.p-media-archive -->
 <!-- media 5-------------------------------------------- -->
-<article class="p-media-archive p-media-archive-search__5 ">
+<article class="p-media p-media-archive p-media-archive-search__5 ">
     <div class="p-img-archive-media p-img-archive-search-media__5"></div><!-- /.p-img-archive-media -->
     <div class="p-container-media-archive p-container-media-archive-search__5">
         <h3 class="p-title-archive-media p-title-archive-search-media__5">見出しが入ります</h3><!-- /.title-archive-media -->
@@ -138,11 +138,37 @@
 </section><!-- /.p-inner-media-archive -->
 
 <!--next back btn  ---------------------------------->
-<nav class="p-inner-archive-pagenation">
+<nav class="p-inner-archive-mobile-pagenation">
 
     <a href="#" class="p-btn-archive__back" >前へ</a><!-- /.p-btn-archive__next -->
     <a href="#" class="p-btn-archive__next">次へ</a><!-- /.p-btn-archive__back -->
 </nav>
+
+<nav class="p-pager p-inner-archive-pagenation">
+    <ul class="p-pager__inner">
+        <li class="p-page p-pager__item">page 2/10</li>
+        <li class="p-pager__item">
+            <a href="" class="p-pager__double-left">
+                <i class="fas fa-angle-double-left fa-4x"></i>
+                <!-- <i class="fa-solid fa-angles-left"></i> -->
+            </a><!-- /.p-pager__link -->
+        </li><!-- /.p-pager__item -->
+        <li class="p-pager__item"><span class="p-pager__link">1</span><!-- /.p-pager__link-active --></li><!-- /.p-pager__item -->
+        <li class="p-pager__item"><a class="p-pager__link p-pager__link-active">2</a></li><!-- /.p-pager__item -->
+        <li class="p-pager__item"><a class="p-pager__link">3</a></li><!-- /.p-pager__item -->
+        <li class="p-pager__item"><a class="p-pager__link">4</a></li><!-- /.p-pager__item -->
+        <li class="p-pager__item"><a class="p-pager__link">5</a></li><!-- /.p-pager__item -->
+        <li class="p-pager__item"><a class="p-pager__link">6</a></li><!-- /.p-pager__item -->
+        <li class="p-pager__item"><a class="p-pager__link">7</a></li><!-- /.p-pager__item -->
+        <li class="p-pager__item"><a class="p-pager__link">8</a></li><!-- /.p-pager__item -->
+        <li class="p-pager__item"><a class="p-pager__link">9</a></li><!-- /.p-pager__item -->
+        <li class="p-pager__item">
+            <a href="" class="p-pager__double-right">
+                <i class="fas fa-angle-double-right fa-4x"></i><!-- /.fas -->
+            </a><!-- /.p-pager__link -->
+        </li><!-- /.p-pager__item -->
+    </ul><!-- /.p-pager__inner -->
+</nav><!-- /.p -->
 <!-- aside-------------------------------------------------------------------------------- -->
 
 <nav class="l-nav">
@@ -197,6 +223,11 @@
 <!-- footer -->
     <footer>
         <div class="l-footer">
+            <section class="p-link__footer">
+                <a class="p-link-footer P-link-footer__shopinfo" href="">ショップ情報</a>
+                <a href="" class="p-link-footer p-link-footer__history">ヒストリー</a><!-- /.c-link__footer-history -->
+            </section><!-- /.p-link__footer -->
+            <small class="co">Copyright: RaiseTech</small><!-- /.co -->
             
         </div><!-- /.l-footer -->
     </footer>

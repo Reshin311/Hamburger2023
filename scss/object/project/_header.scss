@@ -1,9 +1,20 @@
 //header
+@use "../../foundation/mixin" as *;
+
+
 
 .p-header-wrapper {
     background-color: #fff7ef;
     overflow: hidden;
+    @include pc {
+        display: flex;
+        width: 80vw;
+        height: 217px;
+    }
 }
+
+
+
 .p-button-menu {
     cursor: pointer;
     color: #707070;
@@ -12,13 +23,26 @@
     margin: 8px 8px 0 auto;
     font-family: Roboto;
     font-weight: 700;
-    
+    @include tablet {
+        font-size: 34px;
+        margin: 20px 25px 0 auto;
+    }
+    @include pc{
+        display: none;
+    }
 }   
 
 .p-title-header-main {
     font-size: 40px;
     color: #707070;
     text-align: center;
+    @include tablet {
+    }
+    @include pc {
+        font-size: 40px;
+        margin: auto auto auto 5vw;
+        
+    }
 }
 
 .p-header-search {
@@ -27,6 +51,19 @@
     margin:40px 7vw 39px;
     gap: 4vw;
     position: relative;
+    
+    @include tablet {
+        gap: 14px;
+    }
+    @include pc {
+        margin: auto 3vw auto auto ;
+    }
+}
+.p-input__header-search {
+    max-width: 400px;
+}
+.p-btn__header-search {
+    max-width: 136px;
 }
 
 

@@ -1,3 +1,9 @@
+
+
+@use "../../foundation/mixin" as *;
+
+
+
 .p-menu__bg {
     position: absolute;
     top: 0;
@@ -9,7 +15,6 @@
     opacity: 0;
     transition: 0.5s;
     
-    
     &.overlay {
         // background-color:rgba($color: #000000, $alpha: 50%) ;
         visibility: visible;
@@ -17,9 +22,16 @@
         opacity: 1;
         position: fixed;
     }
+    @include pc {
+        display: none;
+    }
 }
 
-.p-aside-container {
+
+
+
+// .p-aside-container {
+    nav {
     position: absolute;
     right: 0;
     top: 0;
@@ -30,11 +42,21 @@
     background-color: #f2ede9;
     
     // height: 2716px;
-    height: 100vh;
+    height: 100%;
     overflow: scroll;
     
     transition: 0.4s;
     transition-delay: 0.4s;
+    @include pc {
+        width: 20vw;
+        transition: none;
+        transition-delay: 0ms;
+        position: initial;
+        position: absolute;
+
+        
+    }
+
     
     
     
@@ -42,6 +64,9 @@
 }
 .p-aside-container.open-menu {
     width: 90%;
+    @include tablet {
+        width: 367px;
+    }
 }
 
 
@@ -74,8 +99,10 @@
         height: 30px;
         background: #707070;
         transform: translate(-50%,-50%)rotate(-45deg);
-
-    }    
+    } 
+    @include pc {
+        display: none;
+    }
 
 }
 

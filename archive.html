@@ -15,6 +15,8 @@
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@500;600;700&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=M+PLUS+1&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -37,8 +39,8 @@
 
 <main class="l-main">
     <section class="p-img-archive-top">
-        <h2 class="p-title__archive-top">Menu</h2><!-- /.p-title_header-top -->
-        <small class="p-title-archive__under-title">チーズバーガー</small><!-- /.p-title-archive_under-title -->
+        <h2 class="p-title__archive-top">Menu:</h2><!-- /.p-title_header-top -->
+        <p class="p-title-archive__under-title">チーズバーガー</p><!-- /.p-title-archive_under-title -->
     </section>
     
     <article class="p-inner-article__archive">
@@ -108,12 +110,38 @@
 
 
     <!--next back btn  ---------------------------------->
-    <nav class="p-inner-archive-pagenation">
+    <nav class="p-inner-archive-mobile-pagenation">
 
         <a href="#" class="p-btn-archive__back" >前へ</a><!-- /.p-btn-archive__next -->
         <a href="#" class="p-btn-archive__next">次へ</a><!-- /.p-btn-archive__back -->
     </nav>
 <!-- aタグのリンク先を指定する -->
+
+    <nav class="p-pager p-inner-archive-pagenation">
+        <ul class="p-pager__inner">
+            <li class="p-page p-pager__item">page 1/10</li>
+            <li class="p-pager__item">
+                <a href="" class="p-pager__double-left">
+                    <i class="fas fa-angle-double-left fa-4x"></i>
+                    <!-- <i class="fa-solid fa-angles-left"></i> -->
+                </a><!-- /.p-pager__link -->
+            </li><!-- /.p-pager__item -->
+            <li class="p-pager__item"><span class="p-pager__link p-pager__link-active">1</span><!-- /.p-pager__link-active --></li><!-- /.p-pager__item -->
+            <li class="p-pager__item"><a class="p-pager__link">2</a></li><!-- /.p-pager__item -->
+            <li class="p-pager__item"><a class="p-pager__link">3</a></li><!-- /.p-pager__item -->
+            <li class="p-pager__item"><a class="p-pager__link">4</a></li><!-- /.p-pager__item -->
+            <li class="p-pager__item"><a class="p-pager__link">5</a></li><!-- /.p-pager__item -->
+            <li class="p-pager__item"><a class="p-pager__link">6</a></li><!-- /.p-pager__item -->
+            <li class="p-pager__item"><a class="p-pager__link">7</a></li><!-- /.p-pager__item -->
+            <li class="p-pager__item"><a class="p-pager__link">8</a></li><!-- /.p-pager__item -->
+            <li class="p-pager__item"><a class="p-pager__link">9</a></li><!-- /.p-pager__item -->
+            <li class="p-pager__item">
+                <a href="" class="p-pager__double-right">
+                    <i class="fas fa-angle-double-right fa-4x"></i><!-- /.fas -->
+                </a><!-- /.p-pager__link -->
+            </li><!-- /.p-pager__item -->
+        </ul><!-- /.p-pager__inner -->
+    </nav><!-- /.p -->
 
 </section><!-- /.p-inner-media-archive -->
 

@@ -1,39 +1,28 @@
+@mixin mobile {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
 
-@mixin breakpoint($point) {
-    @if $point == tablet {
-        @media (min-width: 768px) {
+
+
+@mixin tablet{
+        @media screen and (min-width: 768px) {
             @content;
         }
     }
-}
 
-@mixin breakpoint($point) {
-    @if $point == pc {
-        @media (min-width: 1280px) {
+
+@mixin pc {
+        @media screen and (min-width: 1280px) {
             @content;
         }
     }
+
+
+.p-title-header-main {
+    @include mobile{
+        color: red;
+}
 }
 
-body {
-    @include breakpoint(tablet){
-    display: grid;
-    grid-template:
-        "header header header  aside"
-        "main   main   main   aside"
-        "footer footer footer footer";
-    }
-}
-
-header {
-    grid-area: header;
-}
-main {
-    grid-area: main;
-}
-nav {
-    grid-area: aside;
-}
-footer {
-    grid-area: footer;
-}

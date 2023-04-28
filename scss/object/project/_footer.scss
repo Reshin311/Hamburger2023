@@ -1,8 +1,12 @@
 .l-footer {
     height: 150px;
     background-image: url(/img/footer.jpg);
+    background-repeat: repeat;
     text-align: center;
     overflow: hidden;
+
+        width: 100vw;
+
 }
 
 .p-link-footer {

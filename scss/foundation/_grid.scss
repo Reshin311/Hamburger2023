@@ -1,0 +1,24 @@
+body {
+    @include pc{
+    display: grid;
+    grid-template:
+        "header  header  header  aside"  217px
+        "main    main    main    aside"  auto
+        "footer  footer  footer  footer" 150px/
+        auto; 
+    }
+}
+
+header {
+    grid-area: header;
+}
+main {
+    grid-area: main;
+}
+.p-aside-container {
+    grid-area: aside;
+    
+}
+footer {
+    grid-area: footer;
+}

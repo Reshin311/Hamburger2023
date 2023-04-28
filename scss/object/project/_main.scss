@@ -1,5 +1,9 @@
 
 //main
+@use "../../foundation/mixin" as *;
+
+
+
 
 .p-title__main {
     color: #fff;
@@ -11,7 +15,13 @@
     background-size: cover;
     height: 285px;
     overflow: hidden;
+    @include pc {
+        width: 80vw;
+        height: 530px;
+    }
 }
+
+
 .p-title__top {
     color: #ffff;
     font-size: 3.6rem;
@@ -27,18 +37,19 @@
     margin-left: 15px;
     font-family: Roboto;
     }
+
 .p-heading__main {
 color: #3C2A10;
     font-size: 2.2rem;
     margin: 0 0 0;
     }
+
 .p-text {
     font-size: 1.6rem;
     margin-top: 8px;
     color: #3C2A10;
     }
     
-
 
 
 
@@ -54,13 +65,21 @@ color: #3C2A10;
 
 
 
+
+
 .p-container-main-description {
     display: inline-block;
     background: rgba(255,255,255,0.5);
-    margin: 0 5vw 16px;
+    margin: 0 15px 16px;
     padding: 16px;
     &1 {
         margin-top: 210px;
+        @include tablet {
+            margin-top: 250px;
+        }
+        @include pc {
+            margin-top: 500px;
+        }
     }
     
 }
@@ -82,6 +101,27 @@ color: #3C2A10;
     }
     
 }
+.p-card-main {
+    @include tablet {
+        display: flex;
+        padding: 40px 40px;
+        gap: 40px;
+    }
+    @include pc {
+        width: 80vw;
+        padding: 6vw 6vw;
+        flex-wrap: 3vw;
+
+    }
+}
+// .p-card__eatin {
+//     @include tablet {
+//         margin-left: 0;
+//     }
+// }
+
+
+
 
 
 
@@ -90,6 +130,9 @@ color: #3C2A10;
     background-size: cover;
     margin: 0;
     position: relative;
+    @include pc {
+        width: 80vw;
+    }
 }
 .p-gray-scale {
     background-size: cover;
@@ -103,6 +146,10 @@ color: #3C2A10;
 
     height: 415px; //親要素に高さの指定がないから％はつかえない
     // margin-bottom: 276px;
+    @include pc {
+        width: 50vw;
+        height: 100%;
+    }
 }
 .c-title__map {
     color: #fff;
@@ -149,6 +196,7 @@ color: #3C2A10;
     height: 285px;
     overflow: hidden;
     position: relative;
+    
     &:before {
         content: '';
         position: absolute;
@@ -164,8 +212,18 @@ color: #3C2A10;
     color: #fff;
     font-size: 1.6rem;
     margin: 175px 0 110px 25px;
+    @include tablet {
+        margin: 148px 0 110px 150px;
 
+    }
+    
 }
+.p-title-archive-search__under-title {
+    @include tablet {
+        margin: 148px 0 110px 170px;
+    }
+}
+
 
 .p-title__archive-top {
     color: #ffff;
@@ -174,6 +232,18 @@ color: #3C2A10;
     position: absolute;
 }
 
+.p-img-archive-top {
+    @include tablet {
+        display: flex;
+    }
+}
+
+.p-media {
+    @include tablet{
+    display: flex;
+    margin: 0 5vw 20px;
+    }
+}
 
 
 
@@ -182,12 +252,21 @@ color: #3C2A10;
     background-size: cover;
     height: 230px;
     margin: 0 5vw 0;
+    @include tablet{
+        width: 45vw;
+        margin: 0;
+        height: auto;
+        }
 }
 
 .p-container-media-archive {
     background-color: #3c2b1c;
     margin: 0 5vw 20px;
     padding: 32px 16.11px 10px;
+    @include tablet{
+        width: 45vw;
+        margin: 0;
+        }
     
 }
 
@@ -216,14 +295,66 @@ color: #3C2A10;
     margin: 43px auto;
 }
 
-.p-inner-archive-pagenation {
+// ページネーションーーーーーーーーーーーーーーー
+
+.p-inner-archive-mobile-pagenation {
     position: relative;
     height: 100px;
     overflow: hidden;
     font-size: 1.6rem;
     color: #707070;
+    @include tablet {
+        display: none;
+    }
+}
+.p-inner-archive-pagenation {
+    
+        display: none;
     
 }
+
+.p-inner-archive-pagenation {
+    @include tablet {
+    display: flex;
+    overflow-x: auto;
+    margin: 135px 50px 35px;
+    }
+}
+.p-pager__inner {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    :last-child {
+        margin-right: 0;
+    }
+}
+.p-pager__item {
+    margin-right: 15px;
+}
+.p-pager__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid currentColor;
+    color: #707070;
+    transition: 25s;
+    font-size: 16px ;
+}
+.p-page {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: Roboto serif;
+}
+
+.p-pager__link-active {
+    background-color: #3C2B1C;
+    color: #fff;
+}
+
+// モバイル  ページネーション  ーーーーーーーー
 
 .p-btn-archive__back {
     position: absolute;
@@ -242,6 +373,8 @@ color: #3C2A10;
 
 }
 
+
+
 // single & page----------------------------------------------------
 
 .p-img__single-top {
@@ -249,6 +382,9 @@ color: #3C2A10;
     background-size: cover;
     height: 225px;
     overflow: hidden;
+    @include tablet {
+        height: 500px;
+    }
 }
 
 // page-top-img
@@ -257,13 +393,21 @@ color: #3C2A10;
     background-size: cover;
     height: 225px;
     overflow: hidden;
+    @include tablet {
+        height: 500px;
+    }
+
 }
-
-
 
 .p-title__single-top {
     margin-top: 93px;
     margin-left: 5vw;
+    @include tablet {
+        font-size: 6rem;
+        margin-left: 10vw;
+        margin-top: 200px;
+
+    }
 }
 
 .p-title__single-article {
@@ -321,7 +465,13 @@ color: #3C2A10;
 .p-wrapper__single-img-top {
     display: flex;
     height: 124px;
+    @include tablet {
+        height: 264px;
+    }
 }
+
+
+
 
 .p-img__single-media-top {
     object-fit: cover;
@@ -354,18 +504,42 @@ color: #3C2A10;
 .flex-reverse {
     flex-direction: row-reverse;
 }
+
+
+.p-img__single-gallery {
+    object-fit: cover;
+    margin: 0 5vw 20px;
+    width: 90vw;
+    @include tablet {
+        margin: 0;
+        
+    }
+}
+
+.p-img-section__single {
+    @include tablet {
+        display: grid;
+        width: 88vw;
+        margin: 0 5vw;
+        gap: 2vw;
+        grid-template-columns: 44vw 44vw;
+        
+
+    }
+    
+}
+
+
+
 // ネストされたリスト-------------------------------------------------------
+
+
 .p-list__single {
     font-size: 16px;
     color: #3C2A10;
-    // ol {
-    //     padding-left: 3em;
-    //     margin-top: 10px; 
-    // }
-    // ul {
-    //     padding-left: 1.5em;
-    //     margin-top: 10px;
-    // }
+    @include tablet {
+        margin: 63px 10vw ;
+    }
 }
 .p-list-ol__single {
     padding-left: 3em;
@@ -420,10 +594,11 @@ ol {
     margin: auto;
     td {
         padding: 30px 30px;
+        width: 30vw;
     }
 }
 .p-table__single tr td:nth-child(2) {
-    width: 43vw;
+    width: 60vw;
 }
 
 
@@ -433,6 +608,7 @@ ol {
     display: block;
     margin: 30px 5vw ;
     width: 90%;
+    max-width: 429px;
     text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -462,8 +638,3 @@ ol {
     width: 70vw;
 }
 
-.p-img__single-gallery {
-    object-fit: cover;
-    margin: 0 5vw 20px;
-    width: 90vw;
-}
