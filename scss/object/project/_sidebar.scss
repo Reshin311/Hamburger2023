@@ -4,6 +4,10 @@
 
 
 
+
+
+
+
 .p-menu__bg {
     position: absolute;
     top: 0;
@@ -21,6 +25,7 @@
         transition: 0.5s;
         opacity: 1;
         position: fixed;
+        z-index: 2;
     }
     @include pc {
         display: none;
@@ -30,8 +35,8 @@
 
 
 
-// .p-aside-container {
-    nav {
+
+    .l-nav{
     position: absolute;
     right: 0;
     top: 0;
@@ -41,31 +46,35 @@
     position: fixed;
     background-color: #f2ede9;
     
-    // height: 2716px;
+    
     height: 100%;
     overflow: scroll;
     
     transition: 0.4s;
     transition-delay: 0.4s;
+    z-index: 10;
     @include pc {
+        
         width: 20vw;
         transition: none;
         transition-delay: 0ms;
         position: initial;
-        position: absolute;
-
+        height: 100%;
+        overflow: initial;
+        margin-left: 0;
+        
         
     }
 
     
     
-    
-    
 }
-.p-aside-container.open-menu {
+// .p-aside-container.open-menu {
+    .l-nav.open-menu {
     width: 90%;
     @include tablet {
         width: 367px;
+        height: 100%;
     }
 }
 
@@ -126,8 +135,22 @@
     margin-top: 5rem;
     &__burger {
         margin-top: 17.8rem;
+        @include pc {
+            margin-top: 90px;
+
+        }
+    }
+
+}
+.p-title__pc-menu {
+    display: none;
+    @include pc {
+        display: block;    
+        margin-top: 9rem;
+        font-size: 3.4rem;
     }
 }
+
 
 
 .p-menu-list__aside {

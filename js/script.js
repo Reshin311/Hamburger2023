@@ -3,7 +3,7 @@
 console.log("test1")
 
 const btn = document.querySelector('.p-button-menu');
-const menu = document.querySelector('.p-aside-container');
+const menu = document.querySelector('.l-nav');
 const overlay = document.querySelector('.p-menu__bg');
 btn.addEventListener('click', () => {
     console.log("test2")

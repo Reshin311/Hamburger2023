@@ -53,12 +53,12 @@
     </section>
 
 
-    <blockquote class="p-container__block-quote">
+    <div class="p-container__block-quote">
         <p class="p-text__single-block-quote">
             Blockquote 引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ
         </p><!-- /.p-text__single-block-quote -->
         <p class="p-block-quote__single">出典元 : <a href="">◯◯◯◯◯◯◯◯◯◯◯◯</a></p><!-- /.p-block-quote__single -->
-    </blockquote><!-- /.p-container__block-quote -->
+    </div><!-- /.p-container__block-quote -->
 
 
 
@@ -81,9 +81,9 @@
             </p><!-- /.p-text__single-media -->
         </div><!-- /.p-media__single -->
     </article><!-- /.p-wrap__single-media -->
-
-    <img class="p-img__single-media-under" src="../../../img/cooked-foods-750073-2.png">
-
+    <div class="p-wrapper__single-media-under">
+        <img class="p-img__single-media-under" src="../../../img/cooked-foods-750073-2.png">
+    </div><!-- /.p-wrapper__single-media-under -->   
     <section class="p-img-section__single">
         <img  alt="" class="p-img__single-gallery p-img__single-gallery-1" src="../../../img/cooked-foods-750073-2.png">
         <img  alt="" class="p-img__single-gallery p-img__single-gallery-2" src="../../../img/cooked-foods-750073-2.png">
@@ -172,12 +172,14 @@
 </main><!-- /.l-main -->
 
 <!-- aside -------------------------------------------->
+    
+<div class="p-menu__bg"></div>
 
-<nav class="l-nav">
-    <div class="p-menu__bg"></div>
+<nav class="l-nav p-wrapper__aside">
     <div class="p-aside-container">
         <button class="c-btn_menu-close"></button><!-- /.c-btn_menu-close -->
         <section class="p-menu p-menu__burger">
+            <h5 class="c-title-menu p-title__pc-menu">Menu</h5><!-- /.p-title-menu -->
             <h5 class="c-title-menu c-title-menu__burger">バーガー</h5><!-- /.c-title-menu -->
             <ul>
                 <li class="p-menu-list__aside">ハンバーガー</li>
