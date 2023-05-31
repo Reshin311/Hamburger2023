@@ -2,6 +2,9 @@
 //main
 @use "../../foundation/mixin" as *;
 
+body.open-menu {
+    overflow: hidden;
+}
 
 
 
@@ -36,7 +39,7 @@
     margin-top: 13px;
     margin-left: 15px;
     font-family: Roboto;
-    }
+}
 
 .p-heading__main {
 color: #3C2A10;
@@ -52,7 +55,14 @@ color: #3C2A10;
     
 
 
-
+.p-card {
+    @include tablet {
+        width: 50vw;
+    }
+    @include pc {
+    width: 40vw;
+    }
+}
 
 
 .p-card__takeout {
@@ -75,10 +85,11 @@ color: #3C2A10;
     &1 {
         margin-top: 210px;
         @include tablet {
-            margin-top: 250px;
+            align-items: flex-end;
+            // margin-top: 250px;
         }
         @include pc {
-            margin-top: 500px;
+            // margin-top: 500px;
         }
     }
     
@@ -109,7 +120,7 @@ color: #3C2A10;
 
     }
     @include pc {
-        width: 73vw;
+        width: 80vw;
         padding: 6vw 6vw;
         flex-wrap: 3vw;
         gap: 80px;
@@ -135,18 +146,23 @@ color: #3C2A10;
 .p-gray-scale {
     background-size: cover;
     background-color: rgba($color: #000000, $alpha: 30%);
-    height: 649px;
+    min-height: 649px;
+    height: 100%;
+    @include tablet {
+        min-height: auto;
+    }
 
 }
-.p-map {
-    overflow: scroll;
-}
+
 
 .p-overlay__map {
     display: inline-block;
     background: rgba(0, 0, 0,50%);
     
-    height: 415px; //親要素に高さの指定がないから％はつかえない
+    height: 415px; 
+    @include tablet {
+        height: 100%;
+    }
     @include pc {
         width: 50vw;
         height: 100%;
@@ -183,9 +199,7 @@ color: #3C2A10;
     }
 }
 
-.p-container-map {
-    overflow: scroll;
-}
+
 
 
 .c-text__map {
@@ -234,7 +248,7 @@ color: #3C2A10;
     font-size: 1.6rem;
     margin: 175px 0 110px 25px;
     @include tablet {
-        margin: 148px 0 110px 150px;
+        margin: 141px 0 110px 150px;
 
     }
     
@@ -292,6 +306,7 @@ color: #3C2A10;
     @include tablet{
         width: 45vw;
         margin: 0;
+        padding: 32px 59px 10px 35px;
         }
     
 }
