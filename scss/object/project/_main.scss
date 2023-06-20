@@ -2,10 +2,14 @@
 //main
 @use "../../foundation/mixin" as *;
 
+
+
 body.open-menu {
     overflow: hidden;
 }
-
+body {
+    overflow-x: hidden;
+}
 
 
 .p-title__main {
@@ -16,10 +20,11 @@ body.open-menu {
 .p-img-top {
     background-image: url(../../img/mainvisual-pc@2x.jpg);
     background-size: cover;
+    background-position: center bottom;
     height: 285px;
     overflow: hidden;
     @include pc {
-        width: 80vw;
+        width: 100%;
         height: 530px;
     }
 }
@@ -31,6 +36,14 @@ body.open-menu {
     margin: 122px 0 110px 25px;
     position: absolute;
     font-weight: 700;
+    @include tablet {
+        margin-left: 86px;
+
+    }
+    @include pc {
+        margin: 234px 0 237px 86px;
+        font-size: 4rem;
+    }
 }
 
 .p-title__main {
@@ -38,7 +51,16 @@ body.open-menu {
     font-size: 4.1rem;
     margin-top: 13px;
     margin-left: 15px;
+    
     font-family: Roboto;
+    margin-bottom: 210px;
+    @include tablet {
+        margin-bottom: min(275px);
+    }
+    @include pc {
+        font-size: 7rem;
+        margin-bottom: min(700px);
+    }
 }
 
 .p-heading__main {
@@ -56,6 +78,9 @@ color: #3C2A10;
 
 
 .p-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     @include tablet {
         width: 50vw;
     }
@@ -67,6 +92,7 @@ color: #3C2A10;
 
 .p-card__takeout {
     background-image:url(../../img/takeout3@2x.jpg);
+    
 }
 
 .p-card__eatin {
@@ -78,22 +104,11 @@ color: #3C2A10;
 
 
 .p-container-main-description {
-    display: inline-block;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.8);
     margin: 0 15px 16px;
     padding: 16px;
-    &1 {
-        margin-top: 210px;
-        @include tablet {
-            align-items: flex-end;
-            // margin-top: 250px;
-        }
-        @include pc {
-            // margin-top: 500px;
-        }
-    }
-    
 }
+
 .p-heading__main {
     font-weight: bold;
 }
@@ -140,7 +155,7 @@ color: #3C2A10;
     margin: 0;
     position: relative;
     @include pc {
-        width: 80vw;
+        width: 100%;
     }
 }
 .p-gray-scale {
@@ -239,17 +254,47 @@ color: #3C2A10;
         background-color: rgba(0,0,0,0.5); /*半透明のフィルターをかける*/
     }
     @include pc {
-        width: 80vw;
+        width: 100%;
     }
 }
+
+.p-inner-article__archive {
+    box-sizing: border-box;
+    margin: 0px 20px 18px;
+    @include tablet {
+        margin: 0px 48px 37px;
+    }
+    @include pc {
+        margin: 40px 100px 40px 100px;
+    }
+}
+.c-title__archive-article {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #3c2a10;
+
+}
+.p-text__archive-article {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #3c2a10;
+    
+    @include pc {
+        margin: 0 0 70px 0;
+    }
+
+}
+
+
 .p-title-archive__under-title {
-    position: absolute;
     color: #fff;
     font-size: 1.6rem;
     margin: 175px 0 110px 25px;
+    z-index: 2;
     @include tablet {
-        margin: 141px 0 110px 150px;
-
+        margin: 148px 0 110px 285px;
     }
     
 }
@@ -261,10 +306,14 @@ color: #3C2A10;
 
 
 .p-title__archive-top {
-    color: #ffff;
+    color: #fff;
     font-size: 3.6rem;
     margin: 122px 0 110px 25px;
     position: absolute;
+    @include tablet {
+        margin: 106px 0 auto 86px;
+        font-size: 6rem;
+    }
 }
 
 .p-img-archive-top {
@@ -276,7 +325,10 @@ color: #3C2A10;
 .p-media {
     @include tablet{
     display: flex;
-    margin: 0 5vw 20px;
+    margin: 0 35px 20px;
+    }
+    @include pc {
+        margin: 0 100px 20px;
     }
 }
 
@@ -285,29 +337,35 @@ color: #3C2A10;
 .p-img-archive-media {
     background-image: url(../../img/hamburger-card.jpg);
     background-size: cover;
+    background-position: center bottom;
     height: 230px;
-    margin: 0 5vw 0;
+    margin: 0 20px 0;
     @include tablet{
-        width: 45vw;
+        width: 50%;
         margin: 0;
         height: auto;
         }
 }
 .p-inner-media-archive {
     @include pc {
-        width: 80vw;
+        
+        width: 100%;
+        
     }
 }
 
 .p-container-media-archive {
     background-color: #3c2b1c;
-    margin: 0 5vw 20px;
+    margin: 0  20px;
     padding: 32px 16.11px 10px;
     @include tablet{
-        width: 45vw;
+        width: 50%;
         margin: 0;
         padding: 32px 59px 10px 35px;
         }
+    @include pc {
+        padding: 56px 104px 0px 63px;
+    }
     
 }
 
@@ -315,25 +373,50 @@ color: #3C2A10;
     color: #fff;
     font-size: 2rem;
     margin-bottom: 21px;
+    @include tablet {
+        font-size: 3rem;
+        margin-bottom: 36px;
+    }
+    @include pc {
+        font-size: 3rem;
+        margin-bottom: 40px;
+    }
 }
 .p-subtitle-archive-media {
     color: #fff;
     font-size: 1.6rem;
     font-weight: bold;
     padding-bottom: 7px;
+    @include pc {
+        font-size: 2.4rem;
+        padding-bottom: 13px;
+    }
 }
 
 .p-text-archive-media {
     color: #fff;
     font-size: 1.6rem;
+    line-height: 24px;
 }
+
 .p-btn-archive-media-detail {
     background-color: #fff;
     font-size: 1.6rem;
     border-radius: 50px;
     padding: 10px 50px;
     display: block;
-    margin: 43px auto;
+    margin: 43px auto 40px auto;
+    @include tablet {
+        padding: 11px auto ;
+        margin: 45px auto 40px auto;
+    }
+    @include pc {
+        width: 15vw;
+        text-align: center;
+        padding: 20px 0 ;
+        margin: 60px auto 60px auto;
+
+    }
 }
 
 // ページネーションーーーーーーーーーーーーーーー
@@ -358,7 +441,7 @@ color: #3C2A10;
     @include tablet {
     display: flex;
     overflow-x: auto;
-    margin: 135px 50px 35px;
+    margin: 135px auto 65px;
     }
 }
 .p-pager__inner {
@@ -423,11 +506,13 @@ color: #3C2A10;
     background-size: cover;
     height: 225px;
     overflow: hidden;
+    background-position: center bottom;
+
     @include tablet {
         height: 500px;
     }
     @include pc {
-        width: 80vw;
+        width: 100%;
     }
 }
 
@@ -441,7 +526,7 @@ color: #3C2A10;
         height: 500px;
     }
     @include pc {
-        width: 80vw;
+        width: 100%;
     }
 
 }
@@ -451,7 +536,7 @@ color: #3C2A10;
     margin-left: 5vw;
     @include tablet {
         font-size: 6rem;
-        margin-left: 10vw;
+        // margin-left: 10vw;
         margin-top: 200px;
     }
 }
@@ -467,6 +552,9 @@ color: #3C2A10;
     margin-top: 34px;
     margin-left: 5vw;
     margin-bottom: 25px;
+    @include tablet {
+        margin: 55px auto 55px 5vw;
+    }
     @include pc {
         width: 70vw;
         font-size: 3.6rem;
@@ -482,11 +570,7 @@ color: #3C2A10;
 
 }
 
-.p-container-single-article {
-    @include pc {
-        width: 80vw;
-    }
-}
+
 
 
 
@@ -496,8 +580,12 @@ color: #3C2A10;
     font-size: 2.4rem;
     margin-top: 36px;
     margin-left: 5vw;
+    @include tablet {
+        margin: 62px auto 62px 5vw ;
+    }
     @include pc {
         width: 70vw;
+        margin: 62px auto 62px 5vw ;
         font-size: 2.6rem;
     }
 }
@@ -508,10 +596,15 @@ color: #3C2A10;
     font-size: 2rem;
     margin-top: 36px;
     margin-left: 5vw;
+    @include tablet {
+        margin-top: 56px;
+    }
 }
 .p-heading-list {
     @include pc {
-        width: 80vw;
+        // width: 80vw;
+        margin: 0 5vw 0 0;
+
     }
 }
 .p-container__block-quote {
@@ -520,16 +613,17 @@ color: #3C2A10;
     padding: 30px 5vw;
     @include tablet {
         margin: 56px 5vw 56px;
+        padding: 50px 50px 57px;
     }
     @include pc {
-        margin: 56px 5vw 56px;
-        width: 70vw;
-        padding: 50px 5vw;
+        margin: 56px 5vw 56px ;
+        padding: 50px 50px 57px;
     }
 }
 .p-text__single-block-quote {
     color: #3c2a10;
     font-size: 1.6rem;
+    line-height: 2.4rem;
 }
 
 
@@ -539,8 +633,9 @@ color: #3C2A10;
     font-size: 1.6rem;
     margin-top: 3px;
     word-break: break-all;
-    @include pc {
-        margin-top: 50px;
+    @include tablet {
+        margin-top: 60px;
+        
     }
     a {
     text-decoration:  underline;
@@ -557,14 +652,13 @@ color: #3C2A10;
         height: 264px;
     }
     @include pc {
-        width: 80vw;
+        width: 100%;
         height: 500px;
     }
 
 }
 .p-wrap__single-media {
     @include pc {
-        width: 80vw;
         margin: 60px 0 ;
     }
 }
@@ -578,16 +672,11 @@ color: #3C2A10;
         margin-bottom: 231px;
     }
     @include pc {
-        width: 581px;
-        height: 358px;
-        margin-bottom: 60px;
+        width: 40%;
+        margin: 0 auto 60px ;
     }
 }
-.p-wrapper__single-media-under {
-    @include pc {
-        width: 80vw;
-    }
-}
+
 
 
 .p-img__single-media-top {
@@ -596,7 +685,8 @@ color: #3C2A10;
     margin: 0 5vw;
     width: 90vw;
     @include pc {
-        width: 80vw;
+        width: 100%;
+        margin: 0 5vw 0;
     }
     
 }
@@ -605,14 +695,17 @@ color: #3C2A10;
     display: flex;
     align-items: flex-start;
     margin: 30px 5vw 40px;
-    gap: 9px;
-    
-
+    gap: 10px;
+    @include tablet {
+        margin: 60px 5vw 40px;
+        gap: 21px;
+    }
+    @include pc {
+        gap: 40px;
+    }
 }
 
 .p-img__single-media {
-    // height: 89px;
-    // width: 144px;
     height: auto;
     overflow: hidden;
     flex-basis: 40%;
@@ -648,6 +741,7 @@ color: #3C2A10;
     @include pc {
         width: 70vw;
         grid-template-columns: 22vw 22vw 22vw;
+        margin: 0 auto 0;
 
 
 
@@ -665,7 +759,7 @@ color: #3C2A10;
     font-size: 16px;
     color: #3C2A10;
     @include tablet {
-        margin: 63px 10vw ;
+        margin: 63px 6vw ;
     }
     @include pc {
         width: 60vw;
@@ -705,7 +799,7 @@ ol {
     font-size: 16px;
     background-color: #f5f5f5;
     margin:30px 5vw 60px 5vw;
-    padding: 60px 13vw ;
+    padding: 60px 3vw ;
     overflow: hidden;
     @include pc {
         width: 70vw;
@@ -750,6 +844,9 @@ ol {
     background: linear-gradient(to right, #F2EDE9,#DED8D3 );
     color: #3C2A10;  
     border-radius: 20px;
+    @include pc {
+        margin-bottom: 60px;
+    }
 
 }
 // -------------------------------------------------------
@@ -769,6 +866,9 @@ ol {
     font-style: normal;
     @include tablet {
         margin-bottom: 150px;
+    }
+    @include pc {
+        margin-bottom: 274px;
     }
 }
 

@@ -21,7 +21,6 @@
     transition: 0.5s;
     
     &.overlay {
-        // background-color:rgba($color: #000000, $alpha: 50%) ;
         visibility: visible;
         transition: 0.5s;
         opacity: 1;
@@ -46,35 +45,31 @@
     margin-right: 0;
     position: fixed;
     background-color: #f2ede9;
-    
-    
     height: 100%;
-    overflow: scroll;
-    
     transition: 0.4s;
     transition-delay: 0.4s;
     z-index: 10;
+    @include tablet {
+        max-width: 367px;
+    }
     @include pc {
-        
-        width: 20vw;
+        min-width: 367px;
+        width: calc(20vw - calc(20vw - 100%));
         transition: none;
         transition-delay: 0ms;
         position: initial;
         height: 100%;
         overflow: initial;
         margin-left: 0;
-        
-        
-    }
-
-    
-    
+    }    
 }
 
     .l-nav.open-menu {
     width: 90%;
+    max-width: 367px;
+    overflow: scroll;
     @include tablet {
-        width: 367px;
+        max-width: 367px;
         height: 100%;
     }
 }

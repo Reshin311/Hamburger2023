@@ -8,8 +8,9 @@
     background-repeat: repeat;
     text-align: center;
     overflow: hidden;
+    width: calc(100vw - calc(100vw - 100%));
 
-        width: auto;
+        // width: 100%;
 
 }
 
