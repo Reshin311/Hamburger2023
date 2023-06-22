@@ -292,6 +292,7 @@ color: #3C2A10;
     color: #fff;
     font-size: 1.6rem;
     margin: 175px 0 110px 25px;
+    position: absolute;
     z-index: 2;
     @include tablet {
         margin: 148px 0 110px 285px;
@@ -300,7 +301,7 @@ color: #3C2A10;
 }
 .p-title-archive-search__under-title {
     @include tablet {
-        margin: 148px 0 110px 170px;
+        margin: 148px 0 110px 326px;
     }
 }
 
@@ -455,6 +456,15 @@ color: #3C2A10;
 .p-pager__item {
     margin-right: 15px;
 }
+.p-pager__double-left {
+    font-size: 2.5rem;
+}
+.p-pager__double-right {
+    font-size: 2.5rem;
+}
+
+
+
 .p-pager__link {
     display: flex;
     align-items: center;

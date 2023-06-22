@@ -461,6 +461,7 @@ body {
   color: #fff;
   font-size: 1.6rem;
   margin: 175px 0 110px 25px;
+  position: absolute;
   z-index: 2;
 }
 @media screen and (min-width: 768px) {
@@ -471,7 +472,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .p-title-archive-search__under-title {
-    margin: 148px 0 110px 170px;
+    margin: 148px 0 110px 326px;
   }
 }
 
@@ -641,6 +642,14 @@ body {
 
 .p-pager__item {
   margin-right: 15px;
+}
+
+.p-pager__double-left {
+  font-size: 2.5rem;
+}
+
+.p-pager__double-right {
+  font-size: 2.5rem;
 }
 
 .p-pager__link {
@@ -1148,7 +1157,7 @@ ol {
   transition: 0.5s;
   opacity: 1;
   position: fixed;
-  z-index: 3;
+  z-index: 2;
 }
 @media screen and (min-width: 1280px) {
   .p-menu__bg {
