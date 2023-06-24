@@ -10,7 +10,6 @@
     overflow: hidden;
     width: calc(100vw - calc(100vw - 100%));
 
-        // width: 100%;
 
 }
 
@@ -55,7 +54,8 @@
         margin-bottom: 16px;
         font-size: 1.4rem;
         @include tablet {
-            margin-top: 30px;
+            margin-top: 44px;
+            margin-bottom: 24px;
         }
 
     }
